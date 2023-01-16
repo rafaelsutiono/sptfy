@@ -116,7 +116,8 @@ def makeSVG(data, background_color, border_color):
         currentStatus = "Last jammed out to 🎧:"
         recentPlays = get(RECENTLY_PLAYING_URL)
         recentPlaysLength = len(recentPlays["items"])
-        item = recentPlays["items"]["track"]
+        itemIndex = random.randint(0, recentPlaysLength - 1)
+        item = recentPlays["items"][itemIndex]["track"]
     else:
         item = data["item"]
         currentStatus = "Currently jamming to 🎧:"
