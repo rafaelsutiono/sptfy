@@ -8,12 +8,16 @@
                 }
 
                 .currentStatus {
+                    overflow: hidden;
                     float: left;
                     color: #e4e4e4;
                     font-size: 18px;
                     position: static;
                     margin-top: -5px;
                     margin-left: 10px;
+                    animation: 
+                        typing 3.5s steps(30, end),
+                        blink-caret .5s step-end infinite;
                 }
                 
                 .container {
@@ -121,6 +125,11 @@
                         height: 15px;
                         opacity: 0.95
                     }
+                }
+                
+                @keyframes typing {
+                    from { width: 0 }
+                    to { width: 100% }
                 }
                 
                 {{barCSS|safe}}
