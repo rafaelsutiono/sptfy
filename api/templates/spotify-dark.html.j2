@@ -50,39 +50,6 @@
                     white-space: nowrap;
                     text-overflow: ellipsis;
                 }
-                .song-container {
-                    overflow: hidden;
-                    white-space: nowrap;
-                  }
-                  
-                .song-container::before {
-                    content: '\00a0';
-                  }
-                  
-                .scrolling {
-                    {animation: marquee 8s linear infinite alternate;
-                    display: block;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    white-space: nowrap;}
-                    animation: marquee 8s linear infinite alternate;
-                    display: inline-block;
-                    padding-right: 20px;
-                  }
-
-                @keyframes marquee {
-                    from {
-                        transform: translateX(0);
-                    }
-                    to {
-                        transform: translateX(-100%);
-                    }
-                    to {
-                        transform: translateX(100%);
-                    }
-
-                }
 
                 .artist {
                     width: 330px;
@@ -180,11 +147,7 @@
 
                 <div class="content">
                     <a href="{{songURI}}" target="_blank">
-                        <div class="song-container">
-                            <div class="song scrolling">{{songName}}</div>
-                            <div class="song scrolling" aria-hidden="true">{{songName}}</div>
-                            <div class="song scrolling" aria-hidden="true">{{songName}}</div>
-                        </div>
+                        <div class="song">{{songName}}</div>
                     </a>
                     <a href="{{artistURI}}" target="_blank">
                         <div class="artist">{{artistName}}</div>
