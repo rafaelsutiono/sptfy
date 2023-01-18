@@ -118,7 +118,7 @@ def makeSVG(data, background_color, border_color):
         recentPlaysLength = len(recentPlays["items"])
         itemIndex = random.randint(0, recentPlaysLength - 1)
         item = recentPlays["items"][itemIndex]["track"]
-        currentBG = "linear-gradient(-45deg, #9c9c9c, #666666, #393939, #141414, #393939, #666666, #9c9c9c)"
+        currentBG = "linear-gradient(-45deg, #757575, #666666, #393939, #141414, #393939, #666666, #757575)"
     else:
         item = data["item"]
         currentStatus = "Currently jamming to 🎧:"
